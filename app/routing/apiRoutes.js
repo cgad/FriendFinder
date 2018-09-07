@@ -9,8 +9,12 @@ var apiRoutes = function (app, friendsList) {
 
     // handle incoming survey results
     // handle compatibility logic
+    // app.post("/api/friends/")...
+    // app.get to test
     app.get("/api/friends/test", function (req, res) {
-        //var friend = req.body;
+        // comment this out to test
+        // var friend = req.body;
+        // make new friend to test logic
         var friend = {
             name: "test",
             photo: "https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/41120208_10156071099896785_8813983498026090496_o.jpg?_nc_cat=0&oh=11fecda81768ddaf07d9a160b6e31f27&oe=5C30B78A",
@@ -18,10 +22,11 @@ var apiRoutes = function (app, friendsList) {
         };
         friendsList.push(friend);
 
-        // friend = each object in friendsList before it
         // UNSHIFT (instead of push) the new friend.
         // then new friend = friendsList[0].
-        
+        // instead of array... var bestFriend = I;
+        // if diff is < bestFriend, bestFriend = diff;
+        // if not, bestFriend stays whatever it was.
         var diffArr = [];
         for (var i = 1; i < friendsList.length; i++) {
             var diff = 0;
@@ -33,9 +38,6 @@ var apiRoutes = function (app, friendsList) {
             diffArr.push(diff);
             // smallest num in diffArr is the friend math
 
-            // instead of array... var bestFriend = I;
-            // if diff is < bestFriend, bestFriend = diff;
-            // if not, bestFriend stays whatever it was.
             console.log("outer Loop ", i)
         };
         
