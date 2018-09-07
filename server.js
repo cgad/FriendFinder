@@ -6,10 +6,12 @@ var PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+app.use(express.static("public"));
+
+var friendsList = require("./app/data/friends.js");
+require("./app/routing/htmlRoutes.js")(app, path);
+require("./app/routing/apiRoutes.js")(app, friendsList);
 
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
 });
-
-// export this to htmlRoutes.js and apiRoutes.js
-// make into object?
