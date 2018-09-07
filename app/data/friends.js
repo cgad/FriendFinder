@@ -8,6 +8,11 @@ var friendsList = [
         name: "Cara",
         photo: "https://cgad.github.io/assets/images/profile%20image.jpeg",
         scores: [5,4,3,2,1,2,3,4,5,4]
+    },
+    {
+        name: "Leah",
+        photo: "https://www.facebook.com/photo.php?fbid=10201240872208030&set=a.10200226702614424&type=3&theater",
+        scores: [3,4,5,4,3,2,1,2,3,4]
     }
 ];
 
