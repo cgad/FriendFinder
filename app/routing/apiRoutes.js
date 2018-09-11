@@ -47,6 +47,7 @@ var apiRoutes = function (app, friendsList) {
         res.json(friend);
     });
 
+    // click event in frontend JS instead
     app.post("/api/friends", function(req, res) {
         $("#submit").on("click", function(event) {
             console.log(req.body);
