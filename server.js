@@ -6,9 +6,10 @@ var PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+// 
 app.use(express.static("public"));
 
-var friendsList = require("./app/data/friends.js");
+var friendsList = require("./app/public/data/friends.js");
 require("./app/routing/htmlRoutes.js")(app, path);
 require("./app/routing/apiRoutes.js")(app, friendsList);
 
