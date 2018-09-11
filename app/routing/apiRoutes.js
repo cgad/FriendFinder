@@ -11,6 +11,7 @@ var apiRoutes = function (app, friendsList) {
         console.log(req.body);
         console.log(friendsList);
 
+        // max diff is 40, replace matchDiff value with anything less than initial value or previous index value 
         var matchDiff = 50;
 
         var match = {
