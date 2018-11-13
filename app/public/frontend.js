@@ -3,10 +3,14 @@ $("#submit").on("click", function(event) {
 
     var scores = [];
     for (var i = 1; i < 11; i++) {
+        // score = the checked radio button
         var score = $("input[name=q" + i + "]:checked").val();
-        scores.push(score);
+        // add score to scores array
+        if (score !== "") {
+            scores.push(score);
+        }
     };
-    console.log(scores);
+    console.log("scores length:" + scores.length);
 
     var newFriend = {
         name: $("#name").val().trim(),
@@ -23,8 +27,10 @@ $("#submit").on("click", function(event) {
         };
 
         // data is match from apiRoute
+        scores = [];
         $("#bffName").html("<h2>" + data.bestFriend + "!</h2>");
         $("#bffPic").html("<img src=" + data.bestFriendPic + ">");
         $(".modal").modal("show");
     });
+    
 });

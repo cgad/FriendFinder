@@ -26,3 +26,8 @@ p {
 button {
     margin-top: 10px;
 }
+
+img {
+    width: 1em;
+    height: 1em;
+}
